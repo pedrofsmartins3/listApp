@@ -30,9 +30,8 @@ export default function App() {
       const itens = await addDoc(collection(db, "lista"), {
         item,
       });
-      console.log("Adicinado com sucesso,", itens);
     } catch (err) {
-      console.log("Deu erro: ", err);
+      alert(`Deu erro: ${err.message}`);
     }
     setChange(!change);
     setItem("");
@@ -76,7 +75,9 @@ export default function App() {
         value={item}
         onChange={(e) => setItem(e.target.value)}
       />
-      <input id="add-btn" onClick={addItem} placeholder="Adicionar" />
+      <button id="add-btn" onClick={addItem}>
+        Adicionar
+      </button>
       <ul>{displayList}</ul>
     </div>
   );

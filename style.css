@@ -36,14 +36,6 @@ body, html {
     margin: 0 auto;
 }
 
-.theme-btn {
-    background-color: transparent;
-    position: absolute;
-    top: 3%;
-    right: 10%;
-    font-size: 1rem;
-}
-
 header {
     display: flex;
     align-items: center;
@@ -53,7 +45,7 @@ img {
     width: 60px;
 }
 
-input {
+input, #add-btn {
     border: none;
     padding: 1em 2em;
     text-align: center;
@@ -63,6 +55,7 @@ input {
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
 }
+
 
 input::placeholder {
     color: black
@@ -86,6 +79,7 @@ input:focus {
 #add-btn {
     background-color: rgb(173, 60, 43);
     font-weight: 700;
+    color: white;
 }
 
 #add-btn::placeholder {
